@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://TileMap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://mail.tscn" type="PackedScene" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( -3211279, 0, 0, -3211271, 0, 0, -2097119, 0, 0, -2097111, 0, 0, -1834993, 0, 0, -1834985, 0, 0, -1376316, 0, 0, -1376308, 0, 0, -1376300, 0, 0, -1376292, 0, 0, -1376284, 0, 0, -1376276, 0, 0, -1376268, 0, 0, -1376260, 0, 0, -1441788, 0, 0, -917460, 0, 0, -917452, 0, 0, -917444, 0, 0, -917436, 0, 0 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 209.642, -28.5376 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="RigidBody2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1252.16, 29.8737 )
+
+[node name="Area2D" parent="." instance=ExtResource( 4 )]
+position = Vector2( 673.805, 186.136 )

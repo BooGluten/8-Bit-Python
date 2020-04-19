@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://parallax-industrial-pack/layers/skill-desc_0003_bg.png" type="Texture" id=1]
+[ext_resource path="res://parallax-industrial-pack/layers/skill-desc_0000_foreground.png" type="Texture" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://TileMap.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://mail.tscn" type="PackedScene" id=6]
+[ext_resource path="res://MailSignal.tscn" type="PackedScene" id=7]
+[ext_resource path="res://MAil2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Mail3.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Gun.tscn" type="PackedScene" id=10]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+follow_viewport_scale = 0.001
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1050, 600 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2( 5.31994, 3.76411 )
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 0, 0, 1290, 710 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1050, 600 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 6.63538, 102.865 )
+scale = Vector2( 3.99263, 4.83736 )
+texture = ExtResource( 2 )
+centered = false
+region_rect = Rect2( 0, 0, 1290, 710 )
+
+[node name="TileMap" parent="." instance=ExtResource( 4 )]
+tile_data = PoolIntArray( -196676, 0, 0, 11, 1, 0, 27, 1, 0, 43, 1, 0, 59, 1, 0, 75, 1, 0, 196540, 0, 0, 589763, 0, 0, 589771, 0, 0, 589779, 0, 0, 589787, 0, 0, 589795, 0, 0, 589803, 0, 0, 589811, 0, 0, 589819, 0, 0, 524291, 0, 0, 852102, 0, 0, 1376354, 0, 0, 1376362, 0, 0, 1376370, 0, 0, 1376378, 0, 0, 1376385, 0, 0, 2228301, 0, 0, 2228309, 0, 0, 2686930, 1, 0, 2686946, 1, 0, 2686962, 1, 0, 2621442, 1, 0, 2818105, 0, 0, 2818113, 0, 0, 3145746, 0, 0, 3145754, 0, 0, 3145762, 0, 0, 3145770, 0, 0, 3866555, 0, 0, 4325315, 0, 0, 4325323, 0, 0, 5046230, 0, 0, 5046238, 0, 0, 5111835, 1, 0, 5111851, 1, 0, 5111866, 1, 0, 5701612, 0, 0, 5701620, 0, 0, 5636099, 0, 0, 5636107, 0, 0, 5636115, 0, 0, 5636170, 0, 0, 5636188, 0, 0, 5636201, 0, 0, 6226052, 0, 0, 6750325, 0, 0, 6750332, 0, 0, 7471199, 0, 0, 7471207, 0, 0, 7602111, 0, 0, 7602173, 1, 0, 7536652, 1, 0, 7536667, 1, 0, 7536682, 1, 0, 7536697, 1, 0, 7733602, 0, 0, 8126399, 0, 0, 8126407, 0, 0, 8126414, 0, 0, 8126431, 0, 0, 8126439, 0, 0, 8126446, 0, 0, 8126453, 0, 0, 8061001, 0, 0, 8061008, 0, 0, 8257818, 1, 0, 8257834, 1, 0, 8257850, 1, 0, 8257866, 1, 0, 8257890, 0, 0, 8519954, 0, 0, 8782090, 0, 0, 8782098, 0, 0, 8782170, 0, 0, 8782178, 0, 0, 8913141, 0, 0, 8913148, 0, 0, 9109729, 0, 0, 9109737, 0, 0, 9240530, 0, 0, 9240537, 0, 0, 9175063, 1, 0, 9175079, 1, 0, 9175095, 1, 0, 9175111, 1, 0, 9240778, 0, 0, 9240786, 0, 0, 9306290, 0, 0, 9306298, 0, 0, 9633888, 0, 0, 9633895, 0, 0, 9633902, 0, 0, 9633909, 0, 0, 9633916, 0, 0, 9633923, 0, 0, 9633931, 0, 0, 9633946, 0, 0, 9633954, 0, 0, 9764842, 0, 0, 9764849, 0, 0, 9764857, 0, 0, 9699328, 0, 0, 9699335, 0, 0, 9699343, 0, 0, 10748078, 0, 0, 10944698, 0, 0, 11010246, 0, 0, 11010254, 0, 0, 11010295, 1, 0, 11010311, 1, 0, 11010327, 1, 0, 11010343, 1, 0, 11534559, 0, 0, 11534567, 0, 0, 11534575, 0, 0, 11927865, 1, 0, 11927880, 1, 0, 12452184, 0, 0, 12452192, 0, 0, 12452200, 0, 0, 13435252, 0, 0, 13435260, 0, 0, 13893975, 0, 0, 13893983, 0, 0, 13893991, 0, 0, 14024777, 0, 0, 14352700, 0, 0, 14352708, 0, 0, 14352716, 0, 0, 14549065, 0, 0, 14549209, 1, 0, 14549225, 1, 0, 14549241, 1, 0, 14549257, 1, 0, 14549273, 1, 0, 14745809, 0, 0, 14876977, 0, 0, 15073353, 0, 0, 15073361, 0, 0, 15073368, 0, 0, 15073376, 0, 0, 15073384, 0, 0, 15073401, 0, 0, 15073417, 0, 0, 15073433, 0, 0, 15073449, 0, 0, 15073457, 0, 0, 15073473, 0, 0, 15073481, 0, 0, 15073489, 0, 0, 15073577, 0, 0 )
+
+[node name="Enemy" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1356.62, 529.291 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( 86.3388, 533.937 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2417.49, 729.335 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 770.229, 2024.62 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 5260.13, 2144.42 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3679.78, 3386.48 )
+
+[node name="Area2D" parent="." instance=ExtResource( 6 )]
+position = Vector2( 81.775, 2041.54 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="Node2D" parent="." instance=ExtResource( 7 )]
+
+[node name="Area2D2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4848.85, 2144.29 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Area2D3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1856.78, 3406.33 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Area2D4" parent="." instance=ExtResource( 10 )]
+position = Vector2( 2089.1, 1931.4 )
+scale = Vector2( 1.5, 1.5 )
